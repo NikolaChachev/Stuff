@@ -71,10 +71,7 @@ char* String::GetData() const
 {
     return this->data;
 }
-char String::GetAt(int index)
-{
-    return this->data[index];
-}
+
 void String::SetAt(int index, char symbol)
 {
     this->data[index] = symbol;
@@ -116,26 +113,6 @@ void String::concat(char* other)
 {
     int size1 = mystrlen(this->data);
     int size2 = mystrlen(other);
-    char * temp = new char[size1 + size2 + 1];
-
-    for(int i = 0; i< size1; ++i)
-    {
-        temp[i] = this->data[i];
-    }
-
-    for(int i = 0; i< size2; ++i)
-    {
-        temp[i + size1] = other[i];
-    }
-
-    temp[size1+size2 + 1] = '\0';
-    delete[] this->data;
-    this-> data = temp;
-}
-void String::concat(const String& other)
-{
-    int size1 = mystrlen(this->data);
-    int size2 = mystrlen(other.GetData());
     char * temp = new char[size1 + size2 + 1];
 
     for(int i = 0; i< size1; ++i)
