@@ -26,10 +26,6 @@ public:
     char GetAt(int);
     void AddChar(char);
     void SetAt(int, char);
-
-
-    void concat(char*);
-    void concat(const String& other);
 };
 
 #endif // String_H
