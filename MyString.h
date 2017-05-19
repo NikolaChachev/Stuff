@@ -1,7 +1,5 @@
-#ifndef String_H
-#define String_H
+#pragma once
 #include "MyFunc.h"
-#include "vector"
 class String
 {
   char* data;
@@ -21,11 +19,17 @@ public:
     char* operator+(const String&);
     char& operator[](int);
     char& operator[](int) const;
+    bool operator<(const String&);
+    bool operator>(const String&);
+    bool operator<=(const String&);
+    bool operator>=(const String&);
+    bool operator==(const String&);
+    bool operator!=(const String&);
+    String& operator+=(const String& other);
     friend ostream& operator<<(ostream&, String&);
     friend istream& operator>>(istream&, String&);
     char GetAt(int);
     void AddChar(char);
     void SetAt(int, char);
-};
 
-#endif // String_H
+};
