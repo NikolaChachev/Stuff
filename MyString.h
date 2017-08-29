@@ -1,5 +1,5 @@
 #pragma once
-#include "MyFunc.h"
+#include "Functions.h"
 class String
 {
   char* data;
@@ -12,13 +12,14 @@ public:
     String(char*);
     String(const String&);
     String& operator=(const String&);
+    String& operator=(char*);
     ~String();
     void SetSize(int);
     int GetSize() const;
     char* GetData() const;
     char* operator+(const String&);
     char& operator[](int);
-    char& operator[](int) const;
+    char operator[](int) const;
     bool operator<(const String&);
     bool operator>(const String&);
     bool operator<=(const String&);
@@ -31,5 +32,5 @@ public:
     char GetAt(int);
     void AddChar(char);
     void SetAt(int, char);
-
 };
+
