@@ -1,7 +1,6 @@
-#ifndef MYFUNC_H
-#define MYFUNC_H
+#pragma once
 #include <iostream>
 using namespace std;
 int mystrlen(char* src);
 void mystrcpy(char* dst, char* src);
-#endif // MYFUNC_H
+bool mystrcmp(char* src1, char* src2);
